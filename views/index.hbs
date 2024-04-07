@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {{>header}}
+</head>
+
+<body>
+    {{>navbar}}
+
+
+    <div class="moods">
+        <a href="/sad">
+            <div class="mood" id="mood1"><img src="/css/sad.png" alt="sad" width="150px">
+                <h3>SAD</h3>
+            </div>
+        </a>
+        <a href="/happy">
+            <div class="mood" id="mood2"><img src="/css/happy.png" alt="" width="150px">
+                <h3>HAPPY</h3>
+            </div>
+        </a>
+        <a href="anxiety">
+            <div class="mood" id="mood3"><img src="/css/fear.png" alt="" width="150px">
+                <h3>ANXIETY</h3>
+            </div>
+        </a>
+    </div>
+    <div class="moods">
+        <a href="/depression">
+        <div class="mood" id="mood1"><img src="/css/depression.png" alt="sad" width="150px">
+            <h3>DEPRESSED</h3>
+        </div>
+        </a>
+        <div class="arrow">
+            <h1 class="maintitile"> MOOD</h1>
+            <img src="/css/arrow.png" width="150px" alt="">
+        </div>
+        <a href="/bored">
+        <div class="mood" id="mood2">
+            <img src="/css/boring.png" alt="" width="150px">
+            <h3>BORED</h3>
+        </div>
+        </a>
+    </div>
+
+    {{!-- analyse section  --}}
+
+    
+    <h1 class="analysishead">Analyse Your Mood</h1>
+    <div class="analysis">
+        <a href="/analysis">
+            <div class="self">
+                <img src="/css/head.png" width="100px" alt="">
+                <h3>Self Analysis</h3>
+            </div>
+        </a>
+        <a href="">
+            <div class="previous">
+                <img src="/css/reputation.png" width="100px" alt="">
+                 <h3>Check previous</h3>
+            </div>
+        </a>
+    </div>
+        {{!-- Activites section --}}
+    <h1 class="Activities">Activites To</h1>
+    <div class="activitybox">
+        <a href="/cargame">
+            <div class="Game1">
+                <img src="/css/racing-game.png" width="100px" alt="">
+                <h3>Car Racing</h3>
+            </div>
+        </a>
+        <a href="/bubblegame">
+            <div class="Game2">
+                <img src="/css/bubble.png" width="100px" alt="">
+                 <h3>Game 2</h3>
+            </div>
+        </a>
+    </div>
+</body>
+
+</html>

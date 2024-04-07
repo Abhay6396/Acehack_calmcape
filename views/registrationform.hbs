@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    {{>header}}
+</head>
+
+<body>
+    {{>navbar}}
+
+    <div id="forms">
+        <div class="container">
+            <div class="svgimage">
+                <img src="css/signup.jpg" alt="svg image">
+            </div>
+            <div class="formdiv">
+                <h1>Signup Here</h1>
+                <form action="/registration" method="post">
+                    <table cellspacing="20">
+                        <tr>
+                            <td>
+                                <label for="name">Name</label>
+                            </td>
+                            <td>
+                                <input name="name" placeholder="Enter your Name" type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email">Email</label>
+                            </td>
+                            <td>
+                                <input name="email" type="email" placeholder="Enter your Email">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="phone">Phone</label>
+                            </td>
+                            <td>
+                                <input name="phone" type="number" placeholder="Enter your phone">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="password">Password</label>
+                            </td>
+                            <td>
+                                <input name="password" type="password" placeholder="Enter your Password">
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="btn">
+                        <input type="submit">
+                        <input type="reset">
+                    </div>
+
+                </form>
+                <a href="/login">
+                <button class="login" id="login">Already have an account</button>
+                </a>
+                <span id="errormsg">{{error}}</span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

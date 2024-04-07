@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=q, initial-scale=1.0">
+    <title>Anallyse your mental health</title>
+    {{>header}}
+</head>
+
+<body>
+    {{>navbar}}
+    <h1 class="moodhead">
+        Analyse your mood
+    </h1>
+    <div class="analyse">
+        <form action="/analysis" method="post" id="anyform">
+            <label for="name"><h3>Please Provide your name before Take test</h3></label>
+            <input type="text" name="name" id="username">
+            <div class="questions">
+                <label for="ques1">Ques 1. Little interest or pleasure in doing things</label><br>
+                <select name="ques1" id="ques1">
+                    <option value="0">Select one option</option>
+                    <option value="1">NOT AT ALL</option>
+                    <option value="2">Several Days</option>
+                    <option value="2">More than Half Days</option>
+                    <option value="2">Nearly Every Day</option>
+                </select><br>
+                <label for="ques2">Ques 2. Feeling down, depressed, or hopeless</label><br>
+                <select name="ques2" id="ques1">
+                    <option value="0">Select one option</option>
+                    <option value="1">NOT AT ALL</option>
+                    <option value="2">Several Days</option>
+                    <option value="2">More than Half Days</option>
+                    <option value="2">Nearly Every Day</option>
+                </select><br>
+                <label for="ques3">Ques 3. Trouble falling or staying asleep, or sleeping too much</label><br>
+                <select name="ques3" id="ques1">
+                    <option value="0">Select one option</option>
+                    <option value="1">NOT AT ALL</option>
+                    <option value="2">Several Days</option>
+                    <option value="2">More than Half Days</option>
+                    <option value="2">Nearly Every Day</option>
+                </select><br>
+                <label for="ques4">Ques 4. Feeling tired or having little energy</label><br>
+                <select name="ques4" id="ques1">
+                    <option value="0">Select one option</option>
+                    <option value="1">NOT AT ALL</option>
+                    <option value="2">Several Days</option>
+                    <option value="2">More than Half Days</option>
+                    <option value="2">Nearly Every Day</option>
+                </select><br>
+                <label for="ques5">Ques 5. Poor appetite or overeating</label><br>
+                <select name="ques5" id="ques1">
+                    <option value="0">Select one option</option>
+                    <option value="1">NOT AT ALL</option>
+                    <option value="2">Several Days</option>
+                    <option value="2">More than Half Days</option>
+                    <option value="2">Nearly Every Day</option>
+                </select><br>
+                <label for="ques6">Ques 6. Feeling bad about yourself - or that you are a failure or have let yourself or your family down</label><br>
+                <select name="ques6" id="ques1">
+                    <option value="0">Select one option</option>
+                    <option value="1">NOT AT ALL</option>
+                    <option value="2">Several Days</option>
+                    <option value="2">More than Half Days</option>
+                    <option value="2">Nearly Every Day</option>
+                </select><br>
+                <label for="ques7">Ques 7.  Trouble concentrating on things, such as reading the newspaper or watching television
+</label><br>
+                <select name="ques7" id="ques1">
+                    <option value="0">Select one option</option>
+                    <option value="1">NOT AT ALL</option>
+                    <option value="2">Several Days</option>
+                    <option value="2">More than Half Days</option>
+                    <option value="2">Nearly Every Day</option>
+                </select><br>
+                <label for="ques8">Ques 8.  Moving or speaking so slowly that other people could have noticed
+Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual
+</label><br>
+                <select name="ques8" id="ques1">
+                    <option value="0">Select one option</option>
+                    <option value="1">NOT AT ALL</option>
+                    <option value="2">Several Days</option>
+                    <option value="2">More than Half Days</option>
+                    <option value="2">Nearly Every Day</option>
+                </select><br>
+                <label for="ques9">Ques 9. Thoughts that you would be better off dead, or of hurting yourself
+                </label><br>
+                <select name="ques9" id="ques1">
+                    <option value="0">Select one option</option>
+                    <option value="1">NOT AT ALL</option>
+                    <option value="2">Several Days</option>
+                    <option value="2">More than Half Days</option>
+                    <option value="2">Nearly Every Day</option>
+                </select><br>
+                <label for="ques10">Ques 10.  If you checked off any problems, how difficult have these problems made it for you at work, home, or with other people?
+                </label><br>
+                <select name="ques10" id="ques1">
+                    <option value="0">Select one option</option>
+                    <option value="1">NOT AT ALL</option>
+                    <option value="2">Several Days</option>
+                    <option value="2">More than Half Days</option>
+                    <option value="2">Nearly Every Day</option>
+                </select><br>
+            </div>
+            <input type="submit" id="finishtest">
+        </form>
+    </div>
+</body>
+
+</html>

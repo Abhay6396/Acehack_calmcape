@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to your account</title>
+    {{>header}}
+</head>
+
+<body>
+    {{>navbar}}
+    <div id="forms">
+        <div class="container">
+            <div class="svgimage">
+                <img src="css/3650583.jpg" alt="svg image">
+            </div>
+            <div class="formdiv">
+                <H1>Login Here</H1>
+                <form action="/login" method="post">
+                    <table cellspacing="20">
+                        <tr>
+                            <td>
+                                <label for="email">Email</label>
+                            </td>
+                            <td>
+                                <input type="email" name="email" placeholder="Enter your mail">
+                            </td>
+                        </tr>
+                        <td>
+                            <label for="password">Password</label>
+                        </td>
+                        <td>
+                            <input type="password" name="password" placeholder="Enter your password">
+                        </td>
+                        </tr>
+                    </table>
+                    <div class="btn">
+                        <input type="submit">
+                        <input type="reset">
+                    </div>
+
+                </form>
+                <a href="/registration">
+                    <button class="signup" id="signup">Don't Have an account</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

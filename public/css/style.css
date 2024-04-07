@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Tilt Neon", sans-serif;
+}
+body{
+    background-color: #3b3b3b;
+}
+ul{
+    list-style: none;
+    display: flex;
+    margin: 20px 40px;
+}
+ul li{
+    margin: 0px 25px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+.logo{
+    margin: 20px 40px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #202020;
+    color: white;
+}
+#forms{
+    width: 100%;
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    align-items: center;
+}
+.container{
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    background-color: #202020a7;
+    border-radius: 30px;
+    box-shadow: 3px 3px 40px black;
+}
+.container .svgimage{
+    width: 50%;
+}
+.container .svgimage img{
+    width: 25vw;
+    height: 60vh;
+    border-radius: 30px 0px 0px 30px;
+}
+.container .formdiv{
+    display: flex;
+    width: 50%;
+    /* border: 2px solid green; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+label{
+    color: white;
+}
+table input{
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 10px;
+}
+table input:hover{
+    box-shadow: 5px 5px 10px  rgb(137, 2, 255);
+}
+.btn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.btn input{
+    color: white;
+    background-color: rgb(128, 0, 233);
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 6px;
+}
+.login,.signup{
+    margin-top: 20px;
+    color: white;
+    background-color: red;
+    height: 30px;
+    width: 270px;
+    border: none;
+    border-radius: 6px;
+}
+#form2{
+    display: none;
+}
+.header{
+    box-shadow: 2px 2px 10px black;
+}
+#errormsg{
+    color: red;
+}
+.analyse{
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#anyform{
+    width: 80vw;
+    /* border: 2px solid rgb(26, 97, 26); */
+    height: 140vh;
+    /* text-align: center; */
+    padding-top: 20px;
+    background-color: #202020;
+    border-radius: 30px;
+    margin-top: 50vh;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.questions label{
+    font-size: 20px;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+.questions select{
+    /* padding-top: 20px; */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    width: 300px;   
+    height: 30px;
+    border-radius: 5px;
+    border: none;   
+}
+#finishtest{
+    border: none;
+    width: 100px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    background-color: red;
+    font-size: 15px;
+    color: white;
+}
+.maintitile{
+    color: white;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 80px;
+}
+.moods{
+    /* border: 2px solid green; */
+    height: 25vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 200px;
+    margin-top: 100px;
+}
+.mood{
+    /* border: 2px solid red; */
+    width: 15vw;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+    box-shadow: 2px 2px 10px black;
+    color: white;
+}
+.mood:hover{
+    background-color: #000000;
+}
+.arrow{
+    text-align: center;
+}
+.precibehead{
+    background-color: #202020;
+    height: 10vh;
+    border-radius: 20px;
+    margin: 40px 20px;
+    color: white;
+    /* padding: 10px 10px   ; */
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.precribebox{
+    height: 40vh;
+    background-color: #202020;
+    border-radius: 20px;
+    margin: 40px 20px;
+    color: white;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.moodhead{
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+}
+#username{
+    border: none;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    margin: 10px 10px;
+}
+.analysis{
+    /* border: 2px solid green; */
+    margin-top: 30px;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+}
+.self{
+    height: 100%;
+    width: 15vw;
+    border-radius: 20px;
+    background-color: #202020;
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 10px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.self:hover{
+    background-color: black;
+}
+.previous{
+    height: 100%;
+    width: 15vw;
+    border-radius: 20px;
+    background-color: #202020;
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 10px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.previous:hover{
+    background-color: black;
+}
+.analysishead{
+    margin: 100px 20px;
+    text-align: center;
+    background-color: #202020;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+.arrow img{
+    animation: moveUpDown 2s ease-in-out infinite;
+}
+@keyframes moveUpDown{
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+.Activities{
+    margin: 100px 20px;
+    text-align: center;
+    background-color: #202020;
+    border-radius: 10px;
+    color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Game1{
+    height: 100%;
+    width: 15vw;
+    border-radius: 20px;
+    background-color: #202020;
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 10px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Game2{
+    height: 100%;
+    width: 15vw;
+    border-radius: 20px;
+    background-color: #202020;
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 10px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Game2:hover{
+    background-color: #000000;
+}
+.Game1:hover{
+    background-color: #000000;
+}
+.activitybox{
+    margin-top: 30px;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+}
