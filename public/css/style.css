@@ -324,3 +324,6 @@ table input:hover{
     display: flex;
     justify-content: space-around;
 }
+.expert img{
+    width: 30px;
+}

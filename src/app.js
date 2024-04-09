@@ -9,6 +9,7 @@ require("./db/conn");
 // models
 const StdModel = require("./models/Register");
 const Usertestmodel = require("./models/Usertestmodel");
+const HealthModel = require("./models/Healthexpert");
 const port = process.env.port || 8000;
 const partialpath = path.join(__dirname,"../views/partials");
 const staticpath = path.join(__dirname,"../public");
@@ -36,7 +37,9 @@ app.get("/home",(req,res)=>{
 app.get("/analysis",(req,res)=>{
     res.render("analysisform");
 });
-
+app.get("/experts",(req,res)=>{
+    res.render("Experts");
+})
 
 app.get("/sad",(req,res)=>{
     res.render("precribe",{
