@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const hbs = require("hbs");
 const path = require("path");
+const bcrypt = require("bcryptjs");
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
 // databases
 
 require("./db/conn");
@@ -35,11 +38,12 @@ app.get("/home",(req,res)=>{
     res.render("index");
 });
 app.get("/analysis",(req,res)=>{
+    console.log(req.cookies.jwt);
     res.render("analysisform");
 });
 app.get("/experts",(req,res)=>{
     res.render("Experts");
-})
+});
 
 app.get("/sad",(req,res)=>{
     res.render("precribe",{
@@ -93,6 +97,15 @@ app.post("/registration",async (req,res)=>{
 
         });
 
+        const token = await registerdata.generateAuthToken();
+        
+        // save cookies
+        // res.cookie("jwt",token,{
+        //     expires: new Date(Date.now() + 50000),
+        //     httpOnly : true
+        // });
+
+ 
         const registred = await registerdata.save();
         res.status(200).render("loginform");
 
@@ -107,9 +120,19 @@ app.post("/registration",async (req,res)=>{
 
 app.post("/login",async (req,res)=>{
     try {
-        const logData = await StdModel.findOne({"email": req.body.email})
-        console.log(req.body.password);
-        if(logData.password === req.body.password){
+        const logData = await StdModel.findOne({"email": req.body.email});
+        const confermPass = await bcrypt.compare(req.body.password,logData.password);
+        console.log(confermPass);
+        
+        const token = await logData.generateAuthToken();
+        res.cookie("jwt",token,{
+            expires: new Date(Date.now() + 500000),
+            httpOnly : true
+        });
+
+        
+
+        if(confermPass){
             res.status(200).render("index");
         }
         else{
