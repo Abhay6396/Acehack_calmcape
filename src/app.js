@@ -3,6 +3,7 @@ const app = express();
 const hbs = require("hbs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
+const auth = require("./middleware/auth");
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 // databases
@@ -34,56 +35,67 @@ app.get("/login",(req,res)=>{
 app.get("/registration",(req,res)=>{
     res.render("registrationform")
 });
-app.get("/home",(req,res)=>{
+app.get("/home",auth,(req,res)=>{
     res.render("index");
 });
-app.get("/analysis",(req,res)=>{
+app.get("/analysis",auth,(req,res)=>{
     console.log(req.cookies.jwt);
     res.render("analysisform");
 });
-app.get("/experts",(req,res)=>{
+app.get("/experts",auth,(req,res)=>{
     res.render("Experts");
 });
+app.get("/logout",auth,(req,res)=>{
 
-app.get("/sad",(req,res)=>{
+    try {
+        res.clearCookie("jwt");
+        res.render("loginform");
+    } catch (error) {
+        res.send(error);
+    }
+
+
+});
+
+app.get("/sad",auth,(req,res)=>{
     res.render("precribe",{
         "title" : "Feeling sad",
         "head" : "SAD",
         "text" : "Sadness is often addressed through therapy and self-care. Medication, like SSRIs (e.g., sertraline), may be considered for persistent or severe sadness, tailored to individual needs and responses."
     });
 });
-app.get("/happy",(req,res)=>{
+app.get("/happy",auth,(req,res)=>{
     res.render("precribe",{
         "title" : "Feeling Happy",
         "head" : "Happy",
         "text" : "Happyness is often addressed through therapy and self-care. Medication, like SSRIs (e.g., sertraline), may be considered for persistent or severe sadness, tailored to individual needs and responses."
     });
 });
-app.get("/anxiety",(req,res)=>{
+app.get("/anxiety",auth,(req,res)=>{
     res.render("precribe",{
         "title" : "Feeling Anxiety",
         "head" : "ANXIETY",
         "text" : "Anxiety is often addressed through therapy and self-care. Medication, like SSRIs (e.g., sertraline), may be considered for persistent or severe sadness, tailored to individual needs and responses."
     });
 });
-app.get("/depression",(req,res)=>{
+app.get("/depression",auth,(req,res)=>{
     res.render("precribe",{
         "title" : "Feeling Anxiety",
         "head" : "ANXIETY",
         "text" : "Anxiety is often addressed through therapy and self-care. Medication, like SSRIs (e.g., sertraline), may be considered for persistent or severe sadness, tailored to individual needs and responses."
     });
 });
-app.get("/Bored",(req,res)=>{
+app.get("/Bored",auth,(req,res)=>{
     res.render("precribe",{
         "title" : "Feeling Bored",
         "head" : "BORED",
         "text" : "BORED is often addressed through therapy and self-care. Medication, like SSRIs (e.g., sertraline), may be considered for persistent or severe sadness, tailored to individual needs and responses."
     });
 });
-app.get("/cargame",(req,res)=>{
+app.get("/cargame",auth,(req,res)=>{
     res.render("cargame");
 })
-app.get("/bubblegame",(req,res)=>{
+app.get("/bubblegame",auth,(req,res)=>{
     res.render("bubblegame");
 })
 app.post("/registration",async (req,res)=>{
